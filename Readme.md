@@ -76,7 +76,7 @@ docker push username/repository:tag
 
 ### of the host machine - making it accessible via localhost:8090
 
-docker run -p 8090:80 myimage:v1</s>
+docker run -p 8090:80 myimage:v1
 **DETACH MODE**
 docker run -d <imageName>:<tagName>
 **INTERACTIVE TERMINAL**
