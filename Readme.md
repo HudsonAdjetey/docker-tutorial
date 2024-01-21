@@ -89,6 +89,7 @@ password" myimage
 **NETWORKS**
 docker network create mynetwork
 docker run --net mynetwork --ip 172.30.45.6
-**DOCKERFILE EXAMPLE**
-Dockerfile
-g
+**EXPOSING MULTIPLE PORTS**
+docker run -p 8080:8080 -p 909
+0:9090 myimage
+**CONTAINERS AS SERVICES**
