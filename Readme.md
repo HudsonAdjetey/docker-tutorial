@@ -77,27 +77,41 @@ docker push username/repository:tag
 ### of the host machine - making it accessible via localhost:8090
 
 docker run -p 8090:80 myimage:v1
+
+
 **DETACH MODE**
 docker run -d <imageName>:<tagName>
+
 **INTERACTIVE TERMINAL**
 docker run -it <imageName>:<tagName> bash
+
 **VOLUMES**
 docker run -d -P -v /data:/usr/src/app myimage
+
 **ENVIRONMENT VARIABLES**
 docker run -e "DB_USER=dbuser" -e "DB_PASSWORD=
 password" myimage
+
 **NETWORKS**
 docker network create mynetwork
 docker run --net mynetwork --ip 172.30.45.6
+
 **EXPOSING MULTIPLE PORTS**
 docker run -p 8080:8080 -p 909
 0:9090 myimage
+
 **CONTAINERS AS SERVICES**
 docker service create --name myservice --replicas 3 --detach=true --publish
 8080:8080 myimage
+
+
 **SERVICE INSPECTION**
 docker service inspect [SERVICE ID]
+
+
 **UPDATE A SERVICE**
 docker service update --detach=false myservice
+
+
 **REMOVE A SERVICE AND ITS CONTAINERS**
 docker service rm myservice
