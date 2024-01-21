@@ -34,7 +34,7 @@ FROM python:3.7-slim
 
 WORKDIR /app
 
-# Add the current directory contents into the container at /app
+### Add the current directory contents into the container at /app
 
 ADD . /app
 
