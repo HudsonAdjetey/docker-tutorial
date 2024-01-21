@@ -93,3 +93,11 @@ docker run --net mynetwork --ip 172.30.45.6
 docker run -p 8080:8080 -p 909
 0:9090 myimage
 **CONTAINERS AS SERVICES**
+docker service create --name myservice --replicas 3 --detach=true --publish
+8080:8080 myimage
+**SERVICE INSPECTION**
+docker service inspect [SERVICE ID]
+**UPDATE A SERVICE**
+docker service update --detach=false myservice
+**REMOVE A SERVICE AND ITS CONTAINERS**
+docker service rm myservice
